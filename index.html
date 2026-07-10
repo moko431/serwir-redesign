@@ -283,11 +283,24 @@ section{position:relative}
 
 <!-- MENU / OFFERINGS -->
 <section class="pad" id="brasserie">
-  <div class="wrap menu-grid">
+  <div class="wrap">
+    <div class="menu-head reveal">
+      <div>
+        <span class="eyebrow">Ons aanbod</span>
+        <h2 class="serif-l" style="margin-top:14px;max-width:15ch">Gastvrijheid is de basis van alles</h2>
+      </div>
+      <div class="badge" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="47" fill="none" stroke="rgba(233,68,49,.65)" stroke-width="1" stroke-dasharray="1 4.5"/>
+          <defs><path id="cpath" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs>
+          <text font-size="8.4" letter-spacing="2.6" fill="#0D1717"><textPath href="#cpath" startOffset="0">ONTDEK ALLES &#183; ONTDEK ALLES &#183; </textPath></text>
+        </svg>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+    </div>
+    <div class="menu-grid">
     <div class="menu-img reveal"><img id="menuImg" src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_35_01-600h.png" alt="Brasserie van Hotel Serwir"></div>
     <div class="reveal">
-      <span class="eyebrow">Ons aanbod</span>
-      <h2 class="serif-m" style="margin-top:16px">Alles onder een dak</h2>
       <div class="menu-tabs">
         <button class="on" onclick="serTab(this,'hotel')">Hotel</button>
         <button onclick="serTab(this,'brasserie')">Brasserie</button>
@@ -295,6 +308,7 @@ section{position:relative}
         <button onclick="serTab(this,'vergaderen')">Vergaderen</button>
       </div>
       <div class="menu-list" id="menuList"></div>
+    </div>
     </div>
   </div>
 </section>
@@ -304,6 +318,37 @@ section{position:relative}
   <div class="wrap">
     <p class="q reveal">Serwir is er voor elke gelegenheid, van vergaderingen tot seminaries en van recepties tot personeelsfeesten.</p>
     <div class="who reveal">Hotel Serwir, Sint-Niklaas</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap">
+    <div class="about-top">
+      <div class="lbl reveal">Over Serwir</div>
+      <div class="reveal">
+        <h2 class="serif-l">De gastvrije sfeer voelt u meteen.</h2>
+        <p class="about-lead">Wanneer u de lobby van Hotel Serwir binnenwandelt, ervaart u in een mum van tijd de gastvrije en gemoedelijke sfeer van het hotel. Serwir is er voor elke gelegenheid, van een verblijf tot een diner, een vergadering of een feest.</p>
+        <a class="about-link" href="#hotel">Meer over Serwir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+    <div class="about-media reveal">
+      <img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_35_01-600h.png" alt="De sfeer bij Hotel Serwir">
+      <a class="play" href="#events" aria-label="Ontdek Serwir"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></a>
+      <div class="wm">Serwir</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="cats">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Onze categorieën</span></div>
+    <div class="cat-grid">
+      <a class="cat reveal" href="#hotel"><h3>Het Hotel</h3><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/hotel-serwir_v1-240-1920w.webp" alt="Het Hotel"><span class="tag">01 &#183; Ontdek</span></div></a>
+      <a class="cat reveal" href="#brasserie"><h3>De Brasserie</h3><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_36_17-600h.png" alt="De Brasserie"><span class="tag">02 &#183; Ontdek</span></div></a>
+      <a class="cat reveal" href="#feesten"><h3>Feesten &amp; Events</h3><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_06-600h.png" alt="Feesten en Events"><span class="tag">03 &#183; Ontdek</span></div></a>
+    </div>
   </div>
 </section>
 
