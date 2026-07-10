@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Serwir Sint-Niklaas | Viersterrenhotel &amp; Brasserie</title>
+<meta name="description" content="Hotel Serwir is een viersterrenhotel met brasserie in Sint-Niklaas, centraal tussen Antwerpen, Brussel en Gent. 78 elegante kamers, een gezellige brasserie, feestzaal en vergaderzalen. Reserveer uw kamer of tafel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF9F3; --cream-2:#F5ECE4; --cream-3:#EFE4D8;
+  --ink:#0D1717; --ink-2:#1a2626; --soft:rgba(13,23,23,.66); --soft-2:rgba(13,23,23,.4);
+  --line:rgba(13,23,23,.14); --red:#E94431; --creamtext:#FCF7F3;
+  --maxw:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Fraunces",Georgia,serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-weight:400;line-height:1.02;letter-spacing:-.01em;color:var(--ink)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.serif-xl{font-size:clamp(56px,13vw,220px);font-weight:400;line-height:.92;letter-spacing:-.02em;text-transform:uppercase}
+.serif-l{font-size:clamp(34px,6vw,88px);font-weight:400;line-height:1.02}
+.serif-m{font-size:clamp(28px,4vw,54px);font-weight:400;line-height:1.05}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:inherit;font-size:16px;font-weight:400;padding:17px 36px;border-radius:100px;border:1px solid var(--ink);transition:transform .2s ease,background .2s ease,color .2s ease;cursor:pointer;white-space:nowrap}
+.btn svg{width:16px;height:16px}
+.btn-dark{background:var(--ink);color:var(--creamtext)}
+.btn-dark:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--creamtext);transform:translateY(-2px)}
+.btn-cream{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn-cream:hover{background:transparent;color:var(--cream);border-color:var(--cream);transform:translateY(-2px)}
+section{position:relative}
+.pad{padding:120px 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.6,.3,1),transform .8s cubic-bezier(.2,.6,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none}html{scroll-behavior:auto}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:transparent;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:var(--cream);box-shadow:0 1px 0 var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px;gap:20px}
+.brand{font-size:30px;font-weight:400;letter-spacing:-.01em}
+.since{margin-left:18px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);border-radius:100px;padding:8px 16px;color:var(--soft)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:16px;color:var(--ink);transition:color .16s}
+.nav-links a:hover{color:var(--red)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:26px;height:2px;background:var(--ink);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:88px;left:0;right:0;z-index:59;background:var(--cream);padding:18px 32px 28px;box-shadow:0 20px 40px -20px rgba(13,23,23,.25)}
+.mobile-menu a{display:block;padding:13px 0;font-size:20px;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:18px;width:100%}
+
+/* HERO */
+.hero{padding:150px 0 0;text-align:center;position:relative}
+.hero .sun{width:80px;height:34px;margin:0 auto 6px}
+.hero .sun svg{width:100%;height:100%}
+.hero h1{margin:0 auto}
+.hero .tagline{font-size:clamp(20px,3vw,36px);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin-top:14px}
+.hero .divider{width:1px;height:70px;background:var(--ink);margin:34px auto 0}
+.hero-meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:26px;padding-bottom:26px}
+.hero-meta .oh{text-align:left}
+.hero-meta .oh .lab{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.hero-meta .oh .tag{display:inline-block;background:var(--red);color:#fff;font-size:15px;letter-spacing:.04em;padding:5px 12px}
+.hero-meta .ph{font-size:18px;letter-spacing:.02em;border-top:1px solid var(--line);padding-top:10px}
+.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:end}
+.hero-strip .im{overflow:hidden;border-radius:220px 220px 0 0}
+.hero-strip .im img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.hero-strip .im:hover img{transform:scale(1.05)}
+.hero-strip .im:nth-child(1){height:300px}
+.hero-strip .im:nth-child(2){height:380px}
+.hero-strip .im:nth-child(3){height:300px}
+
+/* MARQUEE */
+.marq{background:var(--ink);color:var(--creamtext);padding:26px 0;overflow:hidden;white-space:nowrap}
+.marq-track{display:inline-flex;gap:0;animation:scrollx 30s linear infinite}
+.marq-track span{font-size:26px;letter-spacing:.02em;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.marq-track span::after{content:"\2731";color:var(--red);font-size:18px}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq-track{animation:none}}
+
+/* STATEMENT (dark) */
+.statement{background:var(--ink);color:var(--creamtext);text-align:center;padding:130px 0}
+.statement .eyebrow{color:var(--red)}
+.statement h2{color:var(--creamtext);max-width:16ch;margin:22px auto 26px}
+.statement p{color:rgba(252,247,243,.72);font-size:19px;max-width:620px;margin:0 auto 36px}
+
+/* MENU / OFFERINGS */
+.menu-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.menu-img{overflow:hidden;aspect-ratio:4/5;background:var(--cream-2)}
+.menu-img img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.menu-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+.menu-tabs button{font-family:inherit;font-size:15px;letter-spacing:.02em;background:transparent;border:1px solid var(--line);border-radius:100px;padding:10px 20px;color:var(--soft);cursor:pointer;transition:.18s}
+.menu-tabs button.on{background:var(--ink);color:var(--creamtext);border-color:var(--ink)}
+.menu-list .it{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.menu-list .it:first-child{border-top:1px solid var(--line)}
+.menu-list .it h4{font-size:24px;font-weight:400}
+.menu-list .it p{font-size:15px;color:var(--soft);margin-top:4px}
+.menu-list .it .no{font-size:14px;color:var(--soft-2);letter-spacing:.1em;flex:none}
+
+/* QUOTE band */
+.quote{text-align:center;padding:130px 0;background:var(--cream-2)}
+.quote .q{font-size:clamp(26px,3.6vw,46px);line-height:1.22;max-width:16ch;margin:0 auto;font-style:italic}
+.quote .who{margin-top:26px;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.vlist{margin-top:30px}
+.vlist .v{display:flex;gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.vlist .v:first-child{border-top:1px solid var(--line)}
+.vlist .v .n{font-size:14px;color:var(--red);letter-spacing:.1em;flex:none;width:34px}
+.vlist .v h4{font-size:23px;font-weight:400;margin-bottom:4px}
+.vlist .v p{font-size:15px;color:var(--soft)}
+.values-img{overflow:hidden;aspect-ratio:3/4;background:var(--cream-2)}
+.values-img img{width:100%;height:100%;object-fit:cover}
+
+/* GALLERY */
+.gallery{background:var(--ink);padding:120px 0}
+.gallery .eyebrow{color:var(--red)}
+.gallery h2{color:var(--creamtext)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px;margin-top:48px}
+.gal-grid a{overflow:hidden}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.gal-grid a:hover img{transform:scale(1.06)}
+.gal-grid .tall{grid-row:span 2}
+.gal-grid .wide{grid-column:span 2}
+
+/* HIGHLIGHTS (cards) */
+.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:52px}
+.hl{cursor:pointer}
+.hl .im{overflow:hidden;aspect-ratio:3/2;margin-bottom:20px}
+.hl .im img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.hl:hover .im img{transform:scale(1.05)}
+.hl .cat{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.hl h3{font-size:26px;font-weight:400;margin:12px 0 8px}
+.hl p{font-size:15px;color:var(--soft)}
+
+/* BOOK CTA */
+.book{position:relative;text-align:center;padding:150px 0;color:var(--creamtext);overflow:hidden}
+.book::before{content:"";position:absolute;inset:0;background:url('https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/hotel-serwir_v1-240-1920w.webp') center/cover;transform:scale(1.05)}
+.book::after{content:"";position:absolute;inset:0;background:rgba(13,23,23,.72)}
+.book > *{position:relative;z-index:2}
+.book .eyebrow{color:#F3B0A6}
+.book h2{color:var(--creamtext);margin:20px 0 40px}
+.book .book-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+
+/* FOOTER */
+.foot{background:var(--ink);color:rgba(252,247,243,.66);padding:90px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px;margin-bottom:56px}
+.foot .wm{font-size:34px;color:var(--creamtext);margin-bottom:18px}
+.foot p{font-size:15px;line-height:1.8}
+.foot h4{color:var(--creamtext);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.foot-col a{display:block;font-size:15px;padding:7px 0;color:rgba(252,247,243,.66);transition:.16s}
+.foot-col a:hover{color:var(--creamtext)}
+.foot-contact div{font-size:15px;margin-bottom:12px;line-height:1.6}
+.foot-bottom{border-top:1px solid rgba(252,247,243,.16);padding-top:26px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:rgba(252,247,243,.5)}
+
+.totop{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--creamtext);display:grid;place-items:center;opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s;z-index:55}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop svg{width:20px;height:20px}
+
+@media(max-width:991px){
+  .nav-links,.since{display:none}
+  .burger{display:flex}
+  .menu-grid,.values-grid{grid-template-columns:1fr;gap:40px}
+  .hl-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .pad{padding:80px 0}
+  .hero{padding:120px 0 0}
+  .hero-strip{grid-template-columns:1fr;gap:14px}
+  .hero-strip .im:nth-child(1),.hero-strip .im:nth-child(2),.hero-strip .im:nth-child(3){height:260px;border-radius:160px 160px 0 0}
+  .hl-grid,.gal-grid,.foot-grid{grid-template-columns:1fr}
+  .gal-grid .tall,.gal-grid .wide{grid-row:auto;grid-column:auto}
+  .hero-meta{flex-direction:column;align-items:flex-start;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" style="display:flex;align-items:center"><span class="brand">Serwir</span><span class="since">Viersterrenhotel</span></a>
+    <nav class="nav-links">
+      <a href="#hotel">Hotel</a>
+      <a href="#brasserie">Brasserie</a>
+      <a href="#feesten">Vergaderen &amp; Feesten</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-dark" href="#book" style="padding:12px 26px">Reserveer</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mm">
+  <a href="#hotel">Hotel</a>
+  <a href="#brasserie">Brasserie</a>
+  <a href="#feesten">Vergaderen &amp; Feesten</a>
+  <a href="#events">Events</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-dark" href="#book">Reserveer</a>
+</div>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="sun"><svg viewBox="0 0 80 34" fill="none" stroke="#0D1717" stroke-width="2.4" stroke-linecap="round"><path d="M40 6v-4M26 9l-2-4M54 9l2-4M15 17l-4-2M65 17l4-2"/></svg></div>
+    <h1 class="serif-xl">Serwir</h1>
+    <div class="tagline">Viersterrenhotel &amp; Brasserie</div>
+    <div class="divider"></div>
+    <div class="hero-meta">
+      <div class="oh"><div class="lab">Check-in 15:00 / Check-out 11:00</div><span class="tag">7/7 open</span></div>
+      <div class="ph">+32 (0)3 778 05 11</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-strip">
+      <div class="im reveal"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_35_01-600h.png" alt="Brasserie van Hotel Serwir"></div>
+      <div class="im reveal"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/hotel-serwir_v1-240-1920w.webp" alt="Elegante hotelkamer in Hotel Serwir"></div>
+      <div class="im reveal"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_38-600h.png" alt="Terras van Hotel Serwir"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq" aria-hidden="true">
+  <div class="marq-track">
+    <span>Viersterrenhotel</span><span>Brasserie</span><span>Vergaderen &amp; Feesten</span><span>Events</span><span>Sint-Niklaas</span>
+    <span>Viersterrenhotel</span><span>Brasserie</span><span>Vergaderen &amp; Feesten</span><span>Events</span><span>Sint-Niklaas</span>
+  </div>
+</div>
+
+<!-- STATEMENT -->
+<section class="statement" id="hotel">
+  <div class="wrap">
+    <span class="eyebrow">Welkom in Hotel Serwir</span>
+    <h2 class="serif-l">Zoveel meer dan een stijlvol viersterrenhotel.</h2>
+    <p>Hotel Serwir in Sint-Niklaas ligt centraal tussen Antwerpen, Brussel en Gent. Dankzij de centrale ligging vlakbij de E17 rijdt u op dertig minuten naar Gent of Antwerpen, met gratis parking bij het hotel.</p>
+    <a class="btn btn-cream" href="#brasserie">Ontdek Serwir</a>
+  </div>
+</section>
+
+<!-- MENU / OFFERINGS -->
+<section class="pad" id="brasserie">
+  <div class="wrap menu-grid">
+    <div class="menu-img reveal"><img id="menuImg" src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_35_01-600h.png" alt="Brasserie van Hotel Serwir"></div>
+    <div class="reveal">
+      <span class="eyebrow">Ons aanbod</span>
+      <h2 class="serif-m" style="margin-top:16px">Alles onder een dak</h2>
+      <div class="menu-tabs">
+        <button class="on" onclick="serTab(this,'hotel')">Hotel</button>
+        <button onclick="serTab(this,'brasserie')">Brasserie</button>
+        <button onclick="serTab(this,'feesten')">Feesten</button>
+        <button onclick="serTab(this,'vergaderen')">Vergaderen</button>
+      </div>
+      <div class="menu-list" id="menuList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="wrap">
+    <p class="q reveal">Serwir is er voor elke gelegenheid, van vergaderingen tot seminaries en van recepties tot personeelsfeesten.</p>
+    <div class="who reveal">Hotel Serwir, Sint-Niklaas</div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="pad" id="feesten">
+  <div class="wrap values-grid">
+    <div class="reveal">
+      <span class="eyebrow">Dit vindt u in Hotel Serwir</span>
+      <h2 class="serif-m" style="margin-top:16px">Een viersterrenadres voor elke gelegenheid</h2>
+      <div class="vlist">
+        <div class="v"><span class="n">01</span><div><h4>78 elegante kamers</h4><p>Van Comfort tot Superior, elk met alle comfort voor een aangenaam verblijf.</p></div></div>
+        <div class="v"><span class="n">02</span><div><h4>Een gezellige brasserie</h4><p>Waar altijd iets te beleven is, met een verfijnde a la carte keuken en wekelijkse suggesties.</p></div></div>
+        <div class="v"><span class="n">03</span><div><h4>Een prachtige feestzaal met podium</h4><p>Ideaal voor recepties, personeelsfeesten en huwelijksfeesten.</p></div></div>
+        <div class="v"><span class="n">04</span><div><h4>Volledig uitgeruste vergaderzalen</h4><p>Voor seminaries met of zonder hotelverblijf, en groepsreservaties op maat.</p></div></div>
+      </div>
+      <a class="btn btn-line" href="#book" style="margin-top:30px">Vraag een offerte</a>
+    </div>
+    <div class="values-img reveal"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_06-600h.png" alt="Feestzaal van Hotel Serwir"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Galerij</span>
+      <h2 class="serif-m" style="margin-top:14px">Sfeerbeelden van Serwir</h2>
+    </div>
+    <div class="gal-grid reveal">
+      <a class="tall"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/hotel-serwir_v1-240-1920w.webp" alt="Hotelkamer"></a>
+      <a class="wide"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_35_01-600h.png" alt="Brasserie"></a>
+      <a><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_36_17-600h.png" alt="Interieur"></a>
+      <a><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_38-600h.png" alt="Terras"></a>
+      <a class="wide"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_06-600h.png" alt="Feestzaal"></a>
+      <a><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_33_25-600h.png" alt="Detail"></a>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="pad" id="events">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Uitgelicht</span>
+      <h2 class="serif-m" style="margin-top:14px">Beleef meer bij Serwir</h2>
+    </div>
+    <div class="hl-grid">
+      <article class="hl reveal"><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_38-600h.png" alt="Tomorrowland 2026"></div><span class="cat">Events</span><h3>Tomorrowland 2026 shuttle</h3><p>Verblijf bij Serwir en maak gebruik van onze shuttledienst naar Tomorrowland 2026.</p></article>
+      <article class="hl reveal"><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/hotel-serwir_v1-240-1920w.webp" alt="Arrangementen"></div><span class="cat">Hotel</span><h3>Arrangementen</h3><p>Combineer overnachting, ontbijt en brasserie in een arrangement op maat van uw verblijf.</p></article>
+      <article class="hl reveal"><div class="im"><img src="https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/Schermafbeelding-2022-09-29-om-17_34_06-600h.png" alt="Vergaderen en feesten"></div><span class="cat">Feesten</span><h3>Vergaderen &amp; feesten</h3><p>Van seminaries en vergaderingen tot recepties, huwelijksfeesten en private dining.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK CTA -->
+<section class="book" id="book">
+  <div class="wrap">
+    <span class="eyebrow">Reserveren</span>
+    <h2 class="serif-l">Uw verblijf of tafel wacht.</h2>
+    <div class="book-links">
+      <a class="btn btn-cream" href="tel:+3237780511">Reserveer uw kamer</a>
+      <a class="btn btn-cream" href="tel:+3237780511">Reserveer uw tafel</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wm">Serwir</div>
+        <p>Viersterrenhotel met brasserie, feestzaal en vergaderzalen in het hart van Sint-Niklaas, centraal tussen Antwerpen, Brussel en Gent.</p>
+      </div>
+      <div class="foot-col"><h4>Ontdek</h4><a href="#hotel">Hotel</a><a href="#brasserie">Brasserie</a><a href="#feesten">Vergaderen &amp; Feesten</a><a href="#events">Events</a></div>
+      <div class="foot-col"><h4>Hotel</h4><a href="#brasserie">Onze kamers</a><a href="#brasserie">Het ontbijt</a><a href="#events">Arrangementen</a><a href="#feesten">Onze zalen</a></div>
+      <div class="foot-col foot-contact"><h4>Contact</h4>
+        <div>Koningin Astridlaan 57<br>9100 Sint-Niklaas, België</div>
+        <div><a href="tel:+3237780511">+32 (0)3 778 05 11</a></div>
+        <div><a href="mailto:info@serwir.be">info@serwir.be</a></div>
+        <div>Check-in 15:00 / Check-out 11:00</div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Hotel Serwir, Sint-Niklaas.</span>
+      <span>Viersterrenhotel &amp; Brasserie</span>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" id="totop" href="#top" aria-label="Naar boven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),totop=document.getElementById('totop'),burger=document.getElementById('burger'),mm=document.getElementById('mm');
+  window.addEventListener('scroll',function(){var y=window.scrollY;nav.classList.toggle('scrolled',y>60);totop.classList.toggle('show',y>800);});
+  if(burger&&mm){burger.addEventListener('click',function(){mm.style.display=mm.style.display==='block'?'none':'block';});[].slice.call(mm.querySelectorAll('a')).forEach(function(a){a.addEventListener('click',function(){mm.style.display='none';});});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){io.observe(el);});
+})();
+var IMG='https://le-de.cdn-website.com/dcd1102130924e769ba5293ba0324d49/dms3rep/multi/opt/';
+var SER={
+  hotel:{img:'hotel-serwir_v1-240-1920w.webp',items:[['78 elegante kamers','Van Comfort tot Superior, met alle comfort.'],['Het ontbijt','Start uw dag met een verzorgd ontbijt.'],['Arrangementen','Overnachting, ontbijt en brasserie gecombineerd.'],['Fitness & oplaadpunt','Fitness en laadpalen voor elektrische wagens.']]},
+  brasserie:{img:'Schermafbeelding-2022-09-29-om-17_35_01-600h.png',items:[['À la carte keuken','Een verfijnde keuken, vers en met zorg bereid.'],['Menu en suggesties','Wekelijks nieuwe suggesties om te ontdekken.'],['Dagmenu & Lounge Bar','Een dagmenu en een gezellige lounge bar.'],['Cadeaubon brasserie','Verras iemand met een cadeaubon voor de brasserie.']]},
+  feesten:{img:'Schermafbeelding-2022-09-29-om-17_34_06-600h.png',items:[['Feestzaal met podium','Een prachtige zaal, ideaal voor grote gelegenheden.'],['Recepties & personeelsfeesten','De juiste sfeer voor elk bedrijfsfeest of receptie.'],['Huwelijksfeesten','Vier uw huwelijk in een stijlvol kader.'],['Private Dining','Dineer in besloten kring in een aparte ruimte.']]},
+  vergaderen:{img:'Schermafbeelding-2022-09-29-om-17_36_17-600h.png',items:[['Volledig uitgeruste vergaderzalen','Alles wat u nodig heeft voor een productieve dag.'],['Seminaries met of zonder verblijf','Combineer uw seminarie met een hotelovernachting.'],['Groepsreservaties','Reserveer voor grotere groepen in een keer.'],['Offerte op maat','Vraag vrijblijvend een offerte aan.']]}
+};
+function renderMenu(k){var d=SER[k],h='';d.items.forEach(function(it,i){h+='<div class="it"><div><h4>'+it[0]+'</h4><p>'+it[1]+'</p></div><span class="no">0'+(i+1)+'</span></div>';});document.getElementById('menuList').innerHTML=h;document.getElementById('menuImg').src=IMG+d.img;}
+function serTab(btn,k){[].slice.call(document.querySelectorAll('.menu-tabs button')).forEach(function(b){b.classList.remove('on');});btn.classList.add('on');renderMenu(k);}
+renderMenu('hotel');
+</script>
+</body>
+</html>
